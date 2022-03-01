@@ -64,7 +64,7 @@ exports.getTopTwoRoutes = async (req, res, next) => {
 exports.index = async (req, res, next) => {
     try {
         const Tours = await tourModel.find({ 'Ranking': [1, 2, 3] })
-        console.log(Tours);
+        // console.log(Tours);
         res.status(200).render('index', { Tours });
     }
     catch (err) {
