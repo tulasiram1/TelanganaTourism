@@ -1,0 +1,226 @@
+doctype html 
+html 
+    head 
+        meta(charset='UTF-8')
+        meta(http-equiv='X-UA-Compatible' content='IE=edge')
+        meta(name='viewport' content='width=device-width, initial-scale=1.0')
+        link(rel='stylesheet' href='/styles/AllTours.css')
+        link(rel='icon' type='image/png' sizes='32x32' href='/images/favicon_io/favicon-32x32.png')
+        title Tourism Place | All Tours
+    body 
+        .header 
+            img(src='/images/TourismPlaystation(2).png' alt='LOGO')        
+            h1 All Tours
+        .content 
+            .content-container 
+                .child-1.highlighter
+                    .image-container 
+                        img.tour-image(src=`/images/${Tours[0].Image}` alt='Tour image')
+                    .tour-title #{Tours[0].Name}
+                    .caption #{Tours[0].Caption}
+                    .location 
+                        svg(xmlns='http://www.w3.org/2000/svg' x='0px' y='0px' width='35' height='35' viewBox='0 0 172 172' style=' fill:#000000;')
+                            g(fill='none' fill-rule='nonzero' stroke='none' stroke-width='1' stroke-linecap='butt' stroke-linejoin='miter' stroke-miterlimit='10' stroke-dasharray='' stroke-dashoffset='0' font-family='none' font-weight='none' font-size='none' text-anchor='none' style='mix-blend-mode: normal')
+                                path(d='M0,172v-172h172v172z' fill='none')
+                                g(fill='#1d4ed8')
+                                    path(d='M86,3.44c-30.40906,0 -55.04,24.63094 -55.04,55.04c0,25.14156 13.27625,52.16438 26.3375,73.1c13.06125,20.93563 26.1225,35.7975 26.1225,35.7975c0.65844,0.73906 1.59906,1.16906 2.58,1.16906c0.98094,0 1.92156,-0.43 2.58,-1.16906c0,0 13.07469,-15.17094 26.1225,-36.2275c13.04781,-21.05656 26.3375,-48.01219 26.3375,-72.67c0,-30.40906 -24.63094,-55.04 -55.04,-55.04zM86,10.32c26.70031,0 48.16,21.45969 48.16,48.16c0,22.13156 -12.51031,48.44219 -25.2625,69.015c-10.68281,17.24031 -19.72625,28.33969 -22.8975,32.1425c-3.19812,-3.77594 -12.24156,-14.63344 -22.8975,-31.7125c-12.73875,-20.425 -25.2625,-46.77594 -25.2625,-69.445c0,-26.70031 21.45969,-48.16 48.16,-48.16zM86,37.84c-13.26281,0 -24.08,10.81719 -24.08,24.08c0,13.26281 10.81719,24.08 24.08,24.08c13.26281,0 24.08,-10.81719 24.08,-24.08c0,-13.26281 -10.81719,-24.08 -24.08,-24.08zM86,44.72c9.54063,0 17.2,7.65938 17.2,17.2c0,9.54063 -7.65937,17.2 -17.2,17.2c-9.54062,0 -17.2,-7.65937 -17.2,-17.2c0,-9.54062 7.65938,-17.2 17.2,-17.2z')
+                        p #{Tours[0].Location}
+                    form(action=`./AllTours/${Tours[0]._id}`, method="get") 
+                        button(type='submit') Details
+                .child-2.highlighter
+                    .image-container 
+                        img.tour-image(src=`/images/${Tours[1].Image}` alt='Tour image')
+                    .tour-title #{Tours[1].Name}
+                    .caption #{Tours[1].Caption}
+                    .location 
+                        svg(xmlns='http://www.w3.org/2000/svg' x='0px' y='0px' width='35' height='35' viewBox='0 0 172 172' style=' fill:#000000;')
+                            g(fill='none' fill-rule='nonzero' stroke='none' stroke-width='1' stroke-linecap='butt' stroke-linejoin='miter' stroke-miterlimit='10' stroke-dasharray='' stroke-dashoffset='0' font-family='none' font-weight='none' font-size='none' text-anchor='none' style='mix-blend-mode: normal')
+                                path(d='M0,172v-172h172v172z' fill='none')
+                                g(fill='#1d4ed8')
+                                    path(d='M86,3.44c-30.40906,0 -55.04,24.63094 -55.04,55.04c0,25.14156 13.27625,52.16438 26.3375,73.1c13.06125,20.93563 26.1225,35.7975 26.1225,35.7975c0.65844,0.73906 1.59906,1.16906 2.58,1.16906c0.98094,0 1.92156,-0.43 2.58,-1.16906c0,0 13.07469,-15.17094 26.1225,-36.2275c13.04781,-21.05656 26.3375,-48.01219 26.3375,-72.67c0,-30.40906 -24.63094,-55.04 -55.04,-55.04zM86,10.32c26.70031,0 48.16,21.45969 48.16,48.16c0,22.13156 -12.51031,48.44219 -25.2625,69.015c-10.68281,17.24031 -19.72625,28.33969 -22.8975,32.1425c-3.19812,-3.77594 -12.24156,-14.63344 -22.8975,-31.7125c-12.73875,-20.425 -25.2625,-46.77594 -25.2625,-69.445c0,-26.70031 21.45969,-48.16 48.16,-48.16zM86,37.84c-13.26281,0 -24.08,10.81719 -24.08,24.08c0,13.26281 10.81719,24.08 24.08,24.08c13.26281,0 24.08,-10.81719 24.08,-24.08c0,-13.26281 -10.81719,-24.08 -24.08,-24.08zM86,44.72c9.54063,0 17.2,7.65938 17.2,17.2c0,9.54063 -7.65937,17.2 -17.2,17.2c-9.54062,0 -17.2,-7.65937 -17.2,-17.2c0,-9.54062 7.65938,-17.2 17.2,-17.2z')
+                        p #{Tours[1].Location}
+                    form(action=`./AllTours/${Tours[1]._id}`, method="get") 
+                        button(type='submit') Details
+                .child-3.highlighter
+                    .image-container 
+                        img.tour-image(src=`/images/${Tours[2].Image}` alt='Tour image')
+                    .tour-title #{Tours[2].Name}
+                    .caption #{Tours[2].Caption}
+                    .location 
+                        svg(xmlns='http://www.w3.org/2000/svg' x='0px' y='0px' width='35' height='35' viewBox='0 0 172 172' style=' fill:#000000;')
+                            g(fill='none' fill-rule='nonzero' stroke='none' stroke-width='1' stroke-linecap='butt' stroke-linejoin='miter' stroke-miterlimit='10' stroke-dasharray='' stroke-dashoffset='0' font-family='none' font-weight='none' font-size='none' text-anchor='none' style='mix-blend-mode: normal')
+                                path(d='M0,172v-172h172v172z' fill='none')
+                                g(fill='#1d4ed8')
+                                    path(d='M86,3.44c-30.40906,0 -55.04,24.63094 -55.04,55.04c0,25.14156 13.27625,52.16438 26.3375,73.1c13.06125,20.93563 26.1225,35.7975 26.1225,35.7975c0.65844,0.73906 1.59906,1.16906 2.58,1.16906c0.98094,0 1.92156,-0.43 2.58,-1.16906c0,0 13.07469,-15.17094 26.1225,-36.2275c13.04781,-21.05656 26.3375,-48.01219 26.3375,-72.67c0,-30.40906 -24.63094,-55.04 -55.04,-55.04zM86,10.32c26.70031,0 48.16,21.45969 48.16,48.16c0,22.13156 -12.51031,48.44219 -25.2625,69.015c-10.68281,17.24031 -19.72625,28.33969 -22.8975,32.1425c-3.19812,-3.77594 -12.24156,-14.63344 -22.8975,-31.7125c-12.73875,-20.425 -25.2625,-46.77594 -25.2625,-69.445c0,-26.70031 21.45969,-48.16 48.16,-48.16zM86,37.84c-13.26281,0 -24.08,10.81719 -24.08,24.08c0,13.26281 10.81719,24.08 24.08,24.08c13.26281,0 24.08,-10.81719 24.08,-24.08c0,-13.26281 -10.81719,-24.08 -24.08,-24.08zM86,44.72c9.54063,0 17.2,7.65938 17.2,17.2c0,9.54063 -7.65937,17.2 -17.2,17.2c-9.54062,0 -17.2,-7.65937 -17.2,-17.2c0,-9.54062 7.65938,-17.2 17.2,-17.2z')
+                        p #{Tours[2].Location}
+                    form(action=`./AllTours/${Tours[2]._id}`, method="get") 
+                        button(type='submit') Details
+                .child-4.highlighter
+                    .image-container 
+                        img.tour-image(src=`/images/${Tours[3].Image}` alt='Tour image')
+                    .tour-title #{Tours[3].Name}
+                    .caption #{Tours[3].Caption}
+                    .location 
+                        svg(xmlns='http://www.w3.org/2000/svg' x='0px' y='0px' width='35' height='35' viewBox='0 0 172 172' style=' fill:#000000;')
+                            g(fill='none' fill-rule='nonzero' stroke='none' stroke-width='1' stroke-linecap='butt' stroke-linejoin='miter' stroke-miterlimit='10' stroke-dasharray='' stroke-dashoffset='0' font-family='none' font-weight='none' font-size='none' text-anchor='none' style='mix-blend-mode: normal')
+                                path(d='M0,172v-172h172v172z' fill='none')
+                                g(fill='#1d4ed8')
+                                    path(d='M86,3.44c-30.40906,0 -55.04,24.63094 -55.04,55.04c0,25.14156 13.27625,52.16438 26.3375,73.1c13.06125,20.93563 26.1225,35.7975 26.1225,35.7975c0.65844,0.73906 1.59906,1.16906 2.58,1.16906c0.98094,0 1.92156,-0.43 2.58,-1.16906c0,0 13.07469,-15.17094 26.1225,-36.2275c13.04781,-21.05656 26.3375,-48.01219 26.3375,-72.67c0,-30.40906 -24.63094,-55.04 -55.04,-55.04zM86,10.32c26.70031,0 48.16,21.45969 48.16,48.16c0,22.13156 -12.51031,48.44219 -25.2625,69.015c-10.68281,17.24031 -19.72625,28.33969 -22.8975,32.1425c-3.19812,-3.77594 -12.24156,-14.63344 -22.8975,-31.7125c-12.73875,-20.425 -25.2625,-46.77594 -25.2625,-69.445c0,-26.70031 21.45969,-48.16 48.16,-48.16zM86,37.84c-13.26281,0 -24.08,10.81719 -24.08,24.08c0,13.26281 10.81719,24.08 24.08,24.08c13.26281,0 24.08,-10.81719 24.08,-24.08c0,-13.26281 -10.81719,-24.08 -24.08,-24.08zM86,44.72c9.54063,0 17.2,7.65938 17.2,17.2c0,9.54063 -7.65937,17.2 -17.2,17.2c-9.54062,0 -17.2,-7.65937 -17.2,-17.2c0,-9.54062 7.65938,-17.2 17.2,-17.2z')
+                        p #{Tours[3].Location}
+                    form(action=`./AllTours/${Tours[3]._id}`, method="get") 
+                        button(type='submit') Details
+                .child-5.highlighter
+                    .image-container 
+                        img.tour-image(src=`/images/${Tours[4].Image}` alt='Tour image')
+                    .tour-title #{Tours[4].Name}
+                    .caption #{Tours[4].Caption}
+                    .location 
+                        svg(xmlns='http://www.w3.org/2000/svg' x='0px' y='0px' width='35' height='35' viewBox='0 0 172 172' style=' fill:#000000;')
+                            g(fill='none' fill-rule='nonzero' stroke='none' stroke-width='1' stroke-linecap='butt' stroke-linejoin='miter' stroke-miterlimit='10' stroke-dasharray='' stroke-dashoffset='0' font-family='none' font-weight='none' font-size='none' text-anchor='none' style='mix-blend-mode: normal')
+                                path(d='M0,172v-172h172v172z' fill='none')
+                                g(fill='#1d4ed8')
+                                    path(d='M86,3.44c-30.40906,0 -55.04,24.63094 -55.04,55.04c0,25.14156 13.27625,52.16438 26.3375,73.1c13.06125,20.93563 26.1225,35.7975 26.1225,35.7975c0.65844,0.73906 1.59906,1.16906 2.58,1.16906c0.98094,0 1.92156,-0.43 2.58,-1.16906c0,0 13.07469,-15.17094 26.1225,-36.2275c13.04781,-21.05656 26.3375,-48.01219 26.3375,-72.67c0,-30.40906 -24.63094,-55.04 -55.04,-55.04zM86,10.32c26.70031,0 48.16,21.45969 48.16,48.16c0,22.13156 -12.51031,48.44219 -25.2625,69.015c-10.68281,17.24031 -19.72625,28.33969 -22.8975,32.1425c-3.19812,-3.77594 -12.24156,-14.63344 -22.8975,-31.7125c-12.73875,-20.425 -25.2625,-46.77594 -25.2625,-69.445c0,-26.70031 21.45969,-48.16 48.16,-48.16zM86,37.84c-13.26281,0 -24.08,10.81719 -24.08,24.08c0,13.26281 10.81719,24.08 24.08,24.08c13.26281,0 24.08,-10.81719 24.08,-24.08c0,-13.26281 -10.81719,-24.08 -24.08,-24.08zM86,44.72c9.54063,0 17.2,7.65938 17.2,17.2c0,9.54063 -7.65937,17.2 -17.2,17.2c-9.54062,0 -17.2,-7.65937 -17.2,-17.2c0,-9.54062 7.65938,-17.2 17.2,-17.2z')
+                        p #{Tours[4].Location}
+                    form(action=`./AllTours/${Tours[4]._id}`, method="get") 
+                        button(type='submit') Details
+                .child-6.highlighter
+                    .image-container 
+                        img.tour-image(src=`/images/${Tours[5].Image}` alt='Tour image')
+                    .tour-title #{Tours[5].Name}
+                    .caption #{Tours[5].Caption}
+                    .location 
+                        svg(xmlns='http://www.w3.org/2000/svg' x='0px' y='0px' width='35' height='35' viewBox='0 0 172 172' style=' fill:#000000;')
+                            g(fill='none' fill-rule='nonzero' stroke='none' stroke-width='1' stroke-linecap='butt' stroke-linejoin='miter' stroke-miterlimit='10' stroke-dasharray='' stroke-dashoffset='0' font-family='none' font-weight='none' font-size='none' text-anchor='none' style='mix-blend-mode: normal')
+                                path(d='M0,172v-172h172v172z' fill='none')
+                                g(fill='#1d4ed8')
+                                    path(d='M86,3.44c-30.40906,0 -55.04,24.63094 -55.04,55.04c0,25.14156 13.27625,52.16438 26.3375,73.1c13.06125,20.93563 26.1225,35.7975 26.1225,35.7975c0.65844,0.73906 1.59906,1.16906 2.58,1.16906c0.98094,0 1.92156,-0.43 2.58,-1.16906c0,0 13.07469,-15.17094 26.1225,-36.2275c13.04781,-21.05656 26.3375,-48.01219 26.3375,-72.67c0,-30.40906 -24.63094,-55.04 -55.04,-55.04zM86,10.32c26.70031,0 48.16,21.45969 48.16,48.16c0,22.13156 -12.51031,48.44219 -25.2625,69.015c-10.68281,17.24031 -19.72625,28.33969 -22.8975,32.1425c-3.19812,-3.77594 -12.24156,-14.63344 -22.8975,-31.7125c-12.73875,-20.425 -25.2625,-46.77594 -25.2625,-69.445c0,-26.70031 21.45969,-48.16 48.16,-48.16zM86,37.84c-13.26281,0 -24.08,10.81719 -24.08,24.08c0,13.26281 10.81719,24.08 24.08,24.08c13.26281,0 24.08,-10.81719 24.08,-24.08c0,-13.26281 -10.81719,-24.08 -24.08,-24.08zM86,44.72c9.54063,0 17.2,7.65938 17.2,17.2c0,9.54063 -7.65937,17.2 -17.2,17.2c-9.54062,0 -17.2,-7.65937 -17.2,-17.2c0,-9.54062 7.65938,-17.2 17.2,-17.2z')
+                        p #{Tours[5].Location}
+                    form(action=`./AllTours/${Tours[5]._id}`, method="get") 
+                        button(type='submit') Details
+                .child-7.highlighter
+                    .image-container 
+                        img.tour-image(src=`/images/${Tours[6].Image}` alt='Tour image')
+                    .tour-title #{Tours[6].Name}
+                    .caption #{Tours[6].Caption}
+                    .location 
+                        svg(xmlns='http://www.w3.org/2000/svg' x='0px' y='0px' width='35' height='35' viewBox='0 0 172 172' style=' fill:#000000;')
+                            g(fill='none' fill-rule='nonzero' stroke='none' stroke-width='1' stroke-linecap='butt' stroke-linejoin='miter' stroke-miterlimit='10' stroke-dasharray='' stroke-dashoffset='0' font-family='none' font-weight='none' font-size='none' text-anchor='none' style='mix-blend-mode: normal')
+                                path(d='M0,172v-172h172v172z' fill='none')
+                                g(fill='#1d4ed8')
+                                    path(d='M86,3.44c-30.40906,0 -55.04,24.63094 -55.04,55.04c0,25.14156 13.27625,52.16438 26.3375,73.1c13.06125,20.93563 26.1225,35.7975 26.1225,35.7975c0.65844,0.73906 1.59906,1.16906 2.58,1.16906c0.98094,0 1.92156,-0.43 2.58,-1.16906c0,0 13.07469,-15.17094 26.1225,-36.2275c13.04781,-21.05656 26.3375,-48.01219 26.3375,-72.67c0,-30.40906 -24.63094,-55.04 -55.04,-55.04zM86,10.32c26.70031,0 48.16,21.45969 48.16,48.16c0,22.13156 -12.51031,48.44219 -25.2625,69.015c-10.68281,17.24031 -19.72625,28.33969 -22.8975,32.1425c-3.19812,-3.77594 -12.24156,-14.63344 -22.8975,-31.7125c-12.73875,-20.425 -25.2625,-46.77594 -25.2625,-69.445c0,-26.70031 21.45969,-48.16 48.16,-48.16zM86,37.84c-13.26281,0 -24.08,10.81719 -24.08,24.08c0,13.26281 10.81719,24.08 24.08,24.08c13.26281,0 24.08,-10.81719 24.08,-24.08c0,-13.26281 -10.81719,-24.08 -24.08,-24.08zM86,44.72c9.54063,0 17.2,7.65938 17.2,17.2c0,9.54063 -7.65937,17.2 -17.2,17.2c-9.54062,0 -17.2,-7.65937 -17.2,-17.2c0,-9.54062 7.65938,-17.2 17.2,-17.2z')
+                        p #{Tours[6].Location}
+                    form(action=`./AllTours/${Tours[6]._id}`, method="get") 
+                        button(type='submit') Details
+                .child-8.highlighter
+                    .image-container 
+                        img.tour-image(src=`/images/${Tours[7].Image}` alt='Tour image')
+                    .tour-title #{Tours[7].Name}
+                    .caption #{Tours[7].Caption}
+                    .location 
+                        svg(xmlns='http://www.w3.org/2000/svg' x='0px' y='0px' width='35' height='35' viewBox='0 0 172 172' style=' fill:#000000;')
+                            g(fill='none' fill-rule='nonzero' stroke='none' stroke-width='1' stroke-linecap='butt' stroke-linejoin='miter' stroke-miterlimit='10' stroke-dasharray='' stroke-dashoffset='0' font-family='none' font-weight='none' font-size='none' text-anchor='none' style='mix-blend-mode: normal')
+                                path(d='M0,172v-172h172v172z' fill='none')
+                                g(fill='#1d4ed8')
+                                    path(d='M86,3.44c-30.40906,0 -55.04,24.63094 -55.04,55.04c0,25.14156 13.27625,52.16438 26.3375,73.1c13.06125,20.93563 26.1225,35.7975 26.1225,35.7975c0.65844,0.73906 1.59906,1.16906 2.58,1.16906c0.98094,0 1.92156,-0.43 2.58,-1.16906c0,0 13.07469,-15.17094 26.1225,-36.2275c13.04781,-21.05656 26.3375,-48.01219 26.3375,-72.67c0,-30.40906 -24.63094,-55.04 -55.04,-55.04zM86,10.32c26.70031,0 48.16,21.45969 48.16,48.16c0,22.13156 -12.51031,48.44219 -25.2625,69.015c-10.68281,17.24031 -19.72625,28.33969 -22.8975,32.1425c-3.19812,-3.77594 -12.24156,-14.63344 -22.8975,-31.7125c-12.73875,-20.425 -25.2625,-46.77594 -25.2625,-69.445c0,-26.70031 21.45969,-48.16 48.16,-48.16zM86,37.84c-13.26281,0 -24.08,10.81719 -24.08,24.08c0,13.26281 10.81719,24.08 24.08,24.08c13.26281,0 24.08,-10.81719 24.08,-24.08c0,-13.26281 -10.81719,-24.08 -24.08,-24.08zM86,44.72c9.54063,0 17.2,7.65938 17.2,17.2c0,9.54063 -7.65937,17.2 -17.2,17.2c-9.54062,0 -17.2,-7.65937 -17.2,-17.2c0,-9.54062 7.65938,-17.2 17.2,-17.2z')
+                        p #{Tours[7].Location}
+                    form(action=`./AllTours/${Tours[7]._id}`, method="get") 
+                        button(type='submit') Details
+                .child-9.highlighter
+                    .image-container 
+                        img.tour-image(src=`/images/${Tours[8].Image}` alt='Tour image')
+                    .tour-title #{Tours[8].Name}
+                    .caption #{Tours[8].Caption}
+                    .location 
+                        svg(xmlns='http://www.w3.org/2000/svg' x='0px' y='0px' width='35' height='35' viewBox='0 0 172 172' style=' fill:#000000;')
+                            g(fill='none' fill-rule='nonzero' stroke='none' stroke-width='1' stroke-linecap='butt' stroke-linejoin='miter' stroke-miterlimit='10' stroke-dasharray='' stroke-dashoffset='0' font-family='none' font-weight='none' font-size='none' text-anchor='none' style='mix-blend-mode: normal')
+                                path(d='M0,172v-172h172v172z' fill='none')
+                                g(fill='#1d4ed8')
+                                    path(d='M86,3.44c-30.40906,0 -55.04,24.63094 -55.04,55.04c0,25.14156 13.27625,52.16438 26.3375,73.1c13.06125,20.93563 26.1225,35.7975 26.1225,35.7975c0.65844,0.73906 1.59906,1.16906 2.58,1.16906c0.98094,0 1.92156,-0.43 2.58,-1.16906c0,0 13.07469,-15.17094 26.1225,-36.2275c13.04781,-21.05656 26.3375,-48.01219 26.3375,-72.67c0,-30.40906 -24.63094,-55.04 -55.04,-55.04zM86,10.32c26.70031,0 48.16,21.45969 48.16,48.16c0,22.13156 -12.51031,48.44219 -25.2625,69.015c-10.68281,17.24031 -19.72625,28.33969 -22.8975,32.1425c-3.19812,-3.77594 -12.24156,-14.63344 -22.8975,-31.7125c-12.73875,-20.425 -25.2625,-46.77594 -25.2625,-69.445c0,-26.70031 21.45969,-48.16 48.16,-48.16zM86,37.84c-13.26281,0 -24.08,10.81719 -24.08,24.08c0,13.26281 10.81719,24.08 24.08,24.08c13.26281,0 24.08,-10.81719 24.08,-24.08c0,-13.26281 -10.81719,-24.08 -24.08,-24.08zM86,44.72c9.54063,0 17.2,7.65938 17.2,17.2c0,9.54063 -7.65937,17.2 -17.2,17.2c-9.54062,0 -17.2,-7.65937 -17.2,-17.2c0,-9.54062 7.65938,-17.2 17.2,-17.2z')
+                        p #{Tours[8].Location}
+                    form(action=`./AllTours/${Tours[8]._id}`, method="get") 
+                        button(type='submit') Details
+                .child-10.highlighter
+                    .image-container 
+                        img.tour-image(src=`/images/${Tours[9].Image}` alt='Tour image')
+                    .tour-title #{Tours[9].Name}
+                    .caption #{Tours[9].Caption}
+                    .location 
+                        svg(xmlns='http://www.w3.org/2000/svg' x='0px' y='0px' width='35' height='35' viewBox='0 0 172 172' style=' fill:#000000;')
+                            g(fill='none' fill-rule='nonzero' stroke='none' stroke-width='1' stroke-linecap='butt' stroke-linejoin='miter' stroke-miterlimit='10' stroke-dasharray='' stroke-dashoffset='0' font-family='none' font-weight='none' font-size='none' text-anchor='none' style='mix-blend-mode: normal')
+                                path(d='M0,172v-172h172v172z' fill='none')
+                                g(fill='#1d4ed8')
+                                    path(d='M86,3.44c-30.40906,0 -55.04,24.63094 -55.04,55.04c0,25.14156 13.27625,52.16438 26.3375,73.1c13.06125,20.93563 26.1225,35.7975 26.1225,35.7975c0.65844,0.73906 1.59906,1.16906 2.58,1.16906c0.98094,0 1.92156,-0.43 2.58,-1.16906c0,0 13.07469,-15.17094 26.1225,-36.2275c13.04781,-21.05656 26.3375,-48.01219 26.3375,-72.67c0,-30.40906 -24.63094,-55.04 -55.04,-55.04zM86,10.32c26.70031,0 48.16,21.45969 48.16,48.16c0,22.13156 -12.51031,48.44219 -25.2625,69.015c-10.68281,17.24031 -19.72625,28.33969 -22.8975,32.1425c-3.19812,-3.77594 -12.24156,-14.63344 -22.8975,-31.7125c-12.73875,-20.425 -25.2625,-46.77594 -25.2625,-69.445c0,-26.70031 21.45969,-48.16 48.16,-48.16zM86,37.84c-13.26281,0 -24.08,10.81719 -24.08,24.08c0,13.26281 10.81719,24.08 24.08,24.08c13.26281,0 24.08,-10.81719 24.08,-24.08c0,-13.26281 -10.81719,-24.08 -24.08,-24.08zM86,44.72c9.54063,0 17.2,7.65938 17.2,17.2c0,9.54063 -7.65937,17.2 -17.2,17.2c-9.54062,0 -17.2,-7.65937 -17.2,-17.2c0,-9.54062 7.65938,-17.2 17.2,-17.2z')
+                        p #{Tours[9].Location}
+                    form(action=`./AllTours/${Tours[9]._id}`, method="get") 
+                        button(type='submit') Details
+                .child-11.highlighter
+                    .image-container 
+                        img.tour-image(src=`/images/${Tours[10].Image}` alt='Tour image')
+                    .tour-title #{Tours[10].Name}
+                    .caption #{Tours[10].Caption}
+                    .location 
+                        svg(xmlns='http://www.w3.org/2000/svg' x='0px' y='0px' width='35' height='35' viewBox='0 0 172 172' style=' fill:#000000;')
+                            g(fill='none' fill-rule='nonzero' stroke='none' stroke-width='1' stroke-linecap='butt' stroke-linejoin='miter' stroke-miterlimit='10' stroke-dasharray='' stroke-dashoffset='0' font-family='none' font-weight='none' font-size='none' text-anchor='none' style='mix-blend-mode: normal')
+                                path(d='M0,172v-172h172v172z' fill='none')
+                                g(fill='#1d4ed8')
+                                    path(d='M86,3.44c-30.40906,0 -55.04,24.63094 -55.04,55.04c0,25.14156 13.27625,52.16438 26.3375,73.1c13.06125,20.93563 26.1225,35.7975 26.1225,35.7975c0.65844,0.73906 1.59906,1.16906 2.58,1.16906c0.98094,0 1.92156,-0.43 2.58,-1.16906c0,0 13.07469,-15.17094 26.1225,-36.2275c13.04781,-21.05656 26.3375,-48.01219 26.3375,-72.67c0,-30.40906 -24.63094,-55.04 -55.04,-55.04zM86,10.32c26.70031,0 48.16,21.45969 48.16,48.16c0,22.13156 -12.51031,48.44219 -25.2625,69.015c-10.68281,17.24031 -19.72625,28.33969 -22.8975,32.1425c-3.19812,-3.77594 -12.24156,-14.63344 -22.8975,-31.7125c-12.73875,-20.425 -25.2625,-46.77594 -25.2625,-69.445c0,-26.70031 21.45969,-48.16 48.16,-48.16zM86,37.84c-13.26281,0 -24.08,10.81719 -24.08,24.08c0,13.26281 10.81719,24.08 24.08,24.08c13.26281,0 24.08,-10.81719 24.08,-24.08c0,-13.26281 -10.81719,-24.08 -24.08,-24.08zM86,44.72c9.54063,0 17.2,7.65938 17.2,17.2c0,9.54063 -7.65937,17.2 -17.2,17.2c-9.54062,0 -17.2,-7.65937 -17.2,-17.2c0,-9.54062 7.65938,-17.2 17.2,-17.2z')
+                        p #{Tours[10].Location}
+                    form(action=`./AllTours/${Tours[10]._id}`, method="get") 
+                        button(type='submit') Details
+                .child-12.highlighter
+                    .image-container 
+                        img.tour-image(src=`/images/${Tours[11].Image}` alt='Tour image')
+                    .tour-title #{Tours[11].Name}
+                    .caption #{Tours[11].Caption}
+                    .location 
+                        svg(xmlns='http://www.w3.org/2000/svg' x='0px' y='0px' width='35' height='35' viewBox='0 0 172 172' style=' fill:#000000;')
+                            g(fill='none' fill-rule='nonzero' stroke='none' stroke-width='1' stroke-linecap='butt' stroke-linejoin='miter' stroke-miterlimit='10' stroke-dasharray='' stroke-dashoffset='0' font-family='none' font-weight='none' font-size='none' text-anchor='none' style='mix-blend-mode: normal')
+                                path(d='M0,172v-172h172v172z' fill='none')
+                                g(fill='#1d4ed8')
+                                    path(d='M86,3.44c-30.40906,0 -55.04,24.63094 -55.04,55.04c0,25.14156 13.27625,52.16438 26.3375,73.1c13.06125,20.93563 26.1225,35.7975 26.1225,35.7975c0.65844,0.73906 1.59906,1.16906 2.58,1.16906c0.98094,0 1.92156,-0.43 2.58,-1.16906c0,0 13.07469,-15.17094 26.1225,-36.2275c13.04781,-21.05656 26.3375,-48.01219 26.3375,-72.67c0,-30.40906 -24.63094,-55.04 -55.04,-55.04zM86,10.32c26.70031,0 48.16,21.45969 48.16,48.16c0,22.13156 -12.51031,48.44219 -25.2625,69.015c-10.68281,17.24031 -19.72625,28.33969 -22.8975,32.1425c-3.19812,-3.77594 -12.24156,-14.63344 -22.8975,-31.7125c-12.73875,-20.425 -25.2625,-46.77594 -25.2625,-69.445c0,-26.70031 21.45969,-48.16 48.16,-48.16zM86,37.84c-13.26281,0 -24.08,10.81719 -24.08,24.08c0,13.26281 10.81719,24.08 24.08,24.08c13.26281,0 24.08,-10.81719 24.08,-24.08c0,-13.26281 -10.81719,-24.08 -24.08,-24.08zM86,44.72c9.54063,0 17.2,7.65938 17.2,17.2c0,9.54063 -7.65937,17.2 -17.2,17.2c-9.54062,0 -17.2,-7.65937 -17.2,-17.2c0,-9.54062 7.65938,-17.2 17.2,-17.2z')
+                        p #{Tours[11].Location}
+                    form(action=`./AllTours/${Tours[11]._id}`, method="get") 
+                        button(type='submit') Details
+                .child-13.highlighter
+                    .image-container 
+                        img.tour-image(src=`/images/${Tours[12].Image}` alt='Tour image')
+                    .tour-title #{Tours[12].Name}
+                    .caption #{Tours[12].Caption}
+                    .location 
+                        svg(xmlns='http://www.w3.org/2000/svg' x='0px' y='0px' width='35' height='35' viewBox='0 0 172 172' style=' fill:#000000;')
+                            g(fill='none' fill-rule='nonzero' stroke='none' stroke-width='1' stroke-linecap='butt' stroke-linejoin='miter' stroke-miterlimit='10' stroke-dasharray='' stroke-dashoffset='0' font-family='none' font-weight='none' font-size='none' text-anchor='none' style='mix-blend-mode: normal')
+                                path(d='M0,172v-172h172v172z' fill='none')
+                                g(fill='#1d4ed8')
+                                    path(d='M86,3.44c-30.40906,0 -55.04,24.63094 -55.04,55.04c0,25.14156 13.27625,52.16438 26.3375,73.1c13.06125,20.93563 26.1225,35.7975 26.1225,35.7975c0.65844,0.73906 1.59906,1.16906 2.58,1.16906c0.98094,0 1.92156,-0.43 2.58,-1.16906c0,0 13.07469,-15.17094 26.1225,-36.2275c13.04781,-21.05656 26.3375,-48.01219 26.3375,-72.67c0,-30.40906 -24.63094,-55.04 -55.04,-55.04zM86,10.32c26.70031,0 48.16,21.45969 48.16,48.16c0,22.13156 -12.51031,48.44219 -25.2625,69.015c-10.68281,17.24031 -19.72625,28.33969 -22.8975,32.1425c-3.19812,-3.77594 -12.24156,-14.63344 -22.8975,-31.7125c-12.73875,-20.425 -25.2625,-46.77594 -25.2625,-69.445c0,-26.70031 21.45969,-48.16 48.16,-48.16zM86,37.84c-13.26281,0 -24.08,10.81719 -24.08,24.08c0,13.26281 10.81719,24.08 24.08,24.08c13.26281,0 24.08,-10.81719 24.08,-24.08c0,-13.26281 -10.81719,-24.08 -24.08,-24.08zM86,44.72c9.54063,0 17.2,7.65938 17.2,17.2c0,9.54063 -7.65937,17.2 -17.2,17.2c-9.54062,0 -17.2,-7.65937 -17.2,-17.2c0,-9.54062 7.65938,-17.2 17.2,-17.2z')
+                        p #{Tours[12].Location}
+                    form(action=`./AllTours/${Tours[12]._id}`, method="get") 
+                        button(type='submit') Details
+                .child-14.highlighter
+                    .image-container 
+                        img.tour-image(src=`/images/${Tours[13].Image}` alt='Tour image')
+                    .tour-title #{Tours[13].Name}
+                    .caption #{Tours[13].Caption}
+                    .location 
+                        svg(xmlns='http://www.w3.org/2000/svg' x='0px' y='0px' width='35' height='35' viewBox='0 0 172 172' style=' fill:#000000;')
+                            g(fill='none' fill-rule='nonzero' stroke='none' stroke-width='1' stroke-linecap='butt' stroke-linejoin='miter' stroke-miterlimit='10' stroke-dasharray='' stroke-dashoffset='0' font-family='none' font-weight='none' font-size='none' text-anchor='none' style='mix-blend-mode: normal')
+                                path(d='M0,172v-172h172v172z' fill='none')
+                                g(fill='#1d4ed8')
+                                    path(d='M86,3.44c-30.40906,0 -55.04,24.63094 -55.04,55.04c0,25.14156 13.27625,52.16438 26.3375,73.1c13.06125,20.93563 26.1225,35.7975 26.1225,35.7975c0.65844,0.73906 1.59906,1.16906 2.58,1.16906c0.98094,0 1.92156,-0.43 2.58,-1.16906c0,0 13.07469,-15.17094 26.1225,-36.2275c13.04781,-21.05656 26.3375,-48.01219 26.3375,-72.67c0,-30.40906 -24.63094,-55.04 -55.04,-55.04zM86,10.32c26.70031,0 48.16,21.45969 48.16,48.16c0,22.13156 -12.51031,48.44219 -25.2625,69.015c-10.68281,17.24031 -19.72625,28.33969 -22.8975,32.1425c-3.19812,-3.77594 -12.24156,-14.63344 -22.8975,-31.7125c-12.73875,-20.425 -25.2625,-46.77594 -25.2625,-69.445c0,-26.70031 21.45969,-48.16 48.16,-48.16zM86,37.84c-13.26281,0 -24.08,10.81719 -24.08,24.08c0,13.26281 10.81719,24.08 24.08,24.08c13.26281,0 24.08,-10.81719 24.08,-24.08c0,-13.26281 -10.81719,-24.08 -24.08,-24.08zM86,44.72c9.54063,0 17.2,7.65938 17.2,17.2c0,9.54063 -7.65937,17.2 -17.2,17.2c-9.54062,0 -17.2,-7.65937 -17.2,-17.2c0,-9.54062 7.65938,-17.2 17.2,-17.2z')
+                        p #{Tours[13].Location}
+                    form(action=`./AllTours/${Tours[13]._id}`, method="get") 
+                        button(type='submit') Details
+                .child-15.highlighter
+                    .image-container 
+                        img.tour-image(src=`/images/${Tours[14].Image}` alt='Tour image')
+                    .tour-title #{Tours[14].Name}
+                    .caption #{Tours[14].Caption}
+                    .location 
+                        svg(xmlns='http://www.w3.org/2000/svg' x='0px' y='0px' width='35' height='35' viewBox='0 0 172 172' style=' fill:#000000;')
+                            g(fill='none' fill-rule='nonzero' stroke='none' stroke-width='1' stroke-linecap='butt' stroke-linejoin='miter' stroke-miterlimit='10' stroke-dasharray='' stroke-dashoffset='0' font-family='none' font-weight='none' font-size='none' text-anchor='none' style='mix-blend-mode: normal')
+                                path(d='M0,172v-172h172v172z' fill='none')
+                                g(fill='#1d4ed8')
+                                    path(d='M86,3.44c-30.40906,0 -55.04,24.63094 -55.04,55.04c0,25.14156 13.27625,52.16438 26.3375,73.1c13.06125,20.93563 26.1225,35.7975 26.1225,35.7975c0.65844,0.73906 1.59906,1.16906 2.58,1.16906c0.98094,0 1.92156,-0.43 2.58,-1.16906c0,0 13.07469,-15.17094 26.1225,-36.2275c13.04781,-21.05656 26.3375,-48.01219 26.3375,-72.67c0,-30.40906 -24.63094,-55.04 -55.04,-55.04zM86,10.32c26.70031,0 48.16,21.45969 48.16,48.16c0,22.13156 -12.51031,48.44219 -25.2625,69.015c-10.68281,17.24031 -19.72625,28.33969 -22.8975,32.1425c-3.19812,-3.77594 -12.24156,-14.63344 -22.8975,-31.7125c-12.73875,-20.425 -25.2625,-46.77594 -25.2625,-69.445c0,-26.70031 21.45969,-48.16 48.16,-48.16zM86,37.84c-13.26281,0 -24.08,10.81719 -24.08,24.08c0,13.26281 10.81719,24.08 24.08,24.08c13.26281,0 24.08,-10.81719 24.08,-24.08c0,-13.26281 -10.81719,-24.08 -24.08,-24.08zM86,44.72c9.54063,0 17.2,7.65938 17.2,17.2c0,9.54063 -7.65937,17.2 -17.2,17.2c-9.54062,0 -17.2,-7.65937 -17.2,-17.2c0,-9.54062 7.65938,-17.2 17.2,-17.2z')
+                        p #{Tours[14].Location}
+                    form(action=`./AllTours/${Tours[14]._id}`, method="get") 
+                        button(type='submit') Details
+                

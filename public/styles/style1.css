@@ -1,0 +1,443 @@
+body{
+    background-color: #d1d5db;
+    height: 100%;
+}
+header{
+    /* border:2px solid black; */
+    /* height: 250px; */
+    background-color: #404040;
+}
+.header-main-container{
+    /* border: 2px solid black; */
+    /* height: 150px; */
+    display: flex;
+    justify-content: center;
+    gap: 2%;
+    align-items: center;
+    background-color: #404040;
+}
+.logo-container{
+    /* border: 2px solid black; */
+    width: 8%;
+    height: auto;
+    /* background-color: red; */
+    flex-grow: 0.1;
+    flex-shrink: 0.1;
+    background-color: #404040;
+    cursor: pointer;
+    user-select: none;
+}
+.header-container{
+    /* border: 2px solid black; */
+    width: 75%;
+    /* height: 100px; */
+    background-color: #404040;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    flex-grow: 0.7;
+    flex-shrink: 0.7;
+    /* background-color: #d1d5db; */
+}
+.title{
+    /* border: 2px solid black; */
+    /* height: 50%; */
+    justify-content: center;
+    align-items: center;
+    /* background-color: #d1d5db; */
+    cursor: pointer;
+    user-select: none;
+}
+.title h1{
+    font-family: sans-serif;
+    width: 50%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1%;
+    margin-bottom: 1.1%;
+    font-size: 50px;
+    color: #4ade80;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-stretch: 100%;
+}
+.child-container{
+    display: flex;
+    gap:15%;
+    align-items: center;
+    justify-content: center;
+    
+}
+input{
+    background-color: #404040;
+    border-radius: 32px;
+    cursor: pointer;
+}
+
+.child-1,.child-2,.child-3{
+    /* border: 2px solid black; */
+    width: 20%;
+    /* height: 25px; */
+    justify-content: center;
+    align-items: center;
+    /* background-color: #d1d5db; */
+    transition-delay: 0.1s;
+    padding: .6%;
+    /* cursor: pointer; */
+    user-select: none;
+}
+/* .child-1:hover,.child-2:hover,.child-3:hover{
+    background-color: #4ade80;
+    border-radius: 40px;
+    transition-delay: 0.01s;
+} */
+.child-1 input,.child-2 input,.child-3 input{
+    font-size: 25px;
+    font-family: sans-serif;
+    width: 60%;
+    text-align: center;
+    margin: 1% auto;
+    color: white;
+}
+
+.About{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+}
+.author1{
+    margin-top: 5%;
+}
+.author2{
+    margin-top: 2%;
+}
+.author1,.author2{
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    /* margin-top: 10%; */
+    background-color: #4ade80;
+}
+/* .image */
+.image{
+    border-radius: 32px;
+    width: 10%;
+}
+.details{
+    display: flex;
+    flex-direction: column;
+    gap: 10%;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.rollno{
+    font-family: sans-serif;
+    font-size: 25px;
+}
+.name{
+    font-family: sans-serif;
+    font-size: 25px;
+}
+
+
+.othertours{
+    display: flex;
+    flex-direction: row;
+    gap: 2%;
+}
+.tour1{
+    /* border: 2px solid black; */
+    width: 30%;
+    margin-left: 2%;
+    background-color: #4ade80;
+}
+.tour2{
+    /* border: 2px solid black; */
+    width: 30%;
+    background-color: #4ade80;
+}
+.tour3{
+    /* border: 2px solid black; */
+    width: 30%;
+    background-color: #4ade80;
+}
+button{
+    width: 40%;
+    padding: 3%;
+    font-size: 15px;
+    border-radius: 32px;
+    background-color: #404040;
+    float: right;
+    color: white;
+    font-family: sans-serif;
+    
+}
+button:hover{
+    cursor: pointer;
+}
+.image-container{
+    width: 80%;
+    margin: 10px auto;
+    
+}
+.tour-image{
+    /* width: 100%; */
+    margin-left: auto;
+    margin-right: auto;
+    width: 340px;
+    height: 300px;
+}
+.tour-image img{
+    width: 100%;
+    height: auto;
+}
+.tour-title{
+    font-size: 20px;
+    text-transform: uppercase;
+    width: 95%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+    font-family: sans-serif;
+}
+.caption{
+    width: 95%;
+    font-size: 15px;
+    text-align: center; 
+    color: white;
+    font-family: sans-serif;
+}
+.location{
+    display: flex;
+    width: 90%;
+    justify-content: center;
+    gap: 0%;
+    color: white;
+    font-family: sans-serif;
+}
+.location svg{
+    height: 30%;
+    padding: 4%;
+}
+.location p{
+    font-size: 15px;
+    text-transform: uppercase;
+    padding: 4%;
+}
+.othertours{
+    margin-top: 1%;
+    width: 98%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.highlighter:hover{
+    box-shadow: 2px 2px 20px 10px #404040;
+    width: 30%;
+    transition-delay: 0.01s;
+}
+
+@media(max-width:1200px) and (min-width:800px) {
+    .cont{
+        font-size: 18px;
+    }
+    .time{
+        font-size: 14px;
+    }
+    .title p{
+        font-size: 24px;
+        width: 50%;
+        
+    }
+    .othertours{
+        flex-direction: column;
+        
+    }
+    .tour1,.tour2,.tour3{
+        width: 40%;
+        margin-top: 2%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    /* .container{
+        flex-direction: column;
+    }
+    .content{
+        width: 95%;
+    }
+    .tour-image{
+        margin-left: auto;
+        margin-right: auto;
+        width: 340px;
+        height: 300px
+    } */
+}
+
+
+.othertours{
+    display: flex;
+    flex-direction: row;
+    gap: 2%;
+}
+.tour1{
+    /* border: 2px solid black; */
+    width: 30%;
+    margin-left: 2%;
+    background-color: #4ade80;
+}
+.tour2{
+    /* border: 2px solid black; */
+    width: 30%;
+    background-color: #4ade80;
+}
+.tour3{
+    /* border: 2px solid black; */
+    width: 30%;
+    background-color: #4ade80;
+}
+button{
+    width: 40%;
+    padding: 3%;
+    font-size: 15px;
+    border-radius: 32px;
+    background-color: #404040;
+    float: right;
+    color: white;
+    font-family: sans-serif;
+    
+}
+button:hover{
+    cursor: pointer;
+}
+.image-container{
+    width: 80%;
+    margin: 10px auto;
+    
+}
+.tour-image{
+    /* width: 100%; */
+    margin-left: auto;
+    margin-right: auto;
+    width: 340px;
+    height: 300px;
+}
+.tour-image img{
+    width: 100%;
+    height: auto;
+}
+.tour-title{
+    font-size: 20px;
+    text-transform: uppercase;
+    width: 95%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+    font-family: sans-serif;
+}
+.caption{
+    width: 95%;
+    font-size: 15px;
+    text-align: center; 
+    color: white;
+    font-family: sans-serif;
+}
+.location{
+    display: flex;
+    width: 90%;
+    justify-content: center;
+    gap: 0%;
+    color: white;
+    font-family: sans-serif;
+}
+.location svg{
+    height: 30%;
+    padding: 4%;
+}
+.location p{
+    font-size: 15px;
+    text-transform: uppercase;
+    padding: 4%;
+}
+.othertours{
+    margin-top: 1%;
+    width: 98%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.highlighter:hover{
+    box-shadow: 2px 2px 20px 10px #404040;
+    width: 30%;
+    transition-delay: 0.01s;
+}
+
+@media(max-width:1100px) and (min-width:800px) {
+    .child-1 input,.child-2 input,.child-3 input{
+        font-size: 15px;
+        width: 50%;
+    }
+    .title h1{
+        font-size: 40px;
+    }
+    .othertours{
+        flex-direction: column;
+        
+    }
+    .tour1,.tour2,.tour3{
+        width: 40%;
+        margin-top: 2%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media(max-width:800px){
+
+    .header-main-container{
+        flex-direction: column;
+    }
+    .logo-container{
+        /* margin-top: 27%; */
+        width: 15%;
+    }
+    .title h1{
+        font-size: 25px;
+    }
+    .child-container{
+        flex-direction: column;
+    }
+    .child-1 input,.child-2 input,.child-3 input{
+        font-size: 15px;
+        width: 90%;
+    }
+
+    .othertours{
+        flex-direction: column;
+        
+    }
+    .tour1,.tour2,.tour3{
+        width: 60%;
+        margin-top: 2%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .container{
+        flex-direction: column;
+    }
+    .content{
+        width: 95%;
+    }
+    .tour-image{
+        margin-left: auto;
+        margin-right: auto;
+        width: 340px;
+        height: 300px
+    }
+    
+    
+}
+
