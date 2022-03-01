@@ -25,7 +25,7 @@ app.set('views', path.join(__dirname, 'views'));
 // console.log(req);
 // console.log(1);
 app.use('/', tourRoute);
-
-app.listen(8080, () => {
-    console.log('Running on port 8080');
+const port = process.env.PORT || 8080
+app.listen(port, () => {
+    console.log(`Running on port ${port}`);
 })
